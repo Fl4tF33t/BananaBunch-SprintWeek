@@ -30,6 +30,7 @@ public class BossController : MonoBehaviour
     BossData bossData;
     public bool isSmashing = false;
     public bool isStaging = false;
+    bool doOnce = true;
 
     //Stage areas
     [SerializeField]
@@ -45,9 +46,9 @@ public class BossController : MonoBehaviour
 
     private void BossData_OnHealthChange(object sender, BossData.OnHealthChangeEventArgs e)
     {
-        if(e.health == 7)
+        if(e.health <= 240 && doOnce)
         {
-            Debug.Log("Smash");
+            doOnce = false;
             SmashAttack(pathIndex);
         }
     }
