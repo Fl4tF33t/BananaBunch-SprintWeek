@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     private bool canDoubleJump;
 
     private Animator anim;
-    private SpriteRenderer theSR;
 
     private void Awake()
     {
@@ -27,7 +26,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        theSR = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -59,14 +57,6 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                if (theRB.velocity.x < 0)
-                {
-                    theSR.flipX = true;
-                }
-                else if (theRB.velocity.x > 0)
-                {
-                    theSR.flipX = false;
-                }
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
         anim.SetBool("isGrounded", isGrounded);
     }
