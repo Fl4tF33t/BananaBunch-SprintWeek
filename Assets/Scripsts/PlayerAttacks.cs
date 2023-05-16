@@ -27,6 +27,11 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField]
     private KeyCode key;
     bool canAttack = false;
+    public bool canHeavyAttack = false;
+    [SerializeField]
+    float whenAttackDoesDamage;
+
+    private float timeDelay = 1.5f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,6 +46,7 @@ public class PlayerAttacks : MonoBehaviour
     private void Update()
     {
         AttackControls();
+        timeDelay -= Time.deltaTime;
     }
 
     private void AttackControls()
@@ -60,14 +66,19 @@ public class PlayerAttacks : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             OnHeavyAttack?.Invoke(this, EventArgs.Empty);
-            if (canAttack)
+            if (timeDelay < 0)
             {
-                Debug.Log("heavy attack");
-                OnAttack?.Invoke(this, new OnAttackEventArgs
+                StartCoroutine(CanDoDamage());
+                if (canHeavyAttack)
                 {
-                    damageAttack = heavyAttack
-                });
+                    Debug.Log("heavy attack");
+                    OnAttack?.Invoke(this, new OnAttackEventArgs
+                    {
+                        damageAttack = heavyAttack
+                    });
+                }
             }
+            
         }
         if (Input.GetKeyDown(key))
         {
@@ -81,5 +92,13 @@ public class PlayerAttacks : MonoBehaviour
                 });
             }
         }
+    }
+    IEnumerator CanDoDamage()
+    {
+        timeDelay = 1.5f;
+        yield return new WaitForSeconds(whenAttackDoesDamage);
+        canHeavyAttack = true;
+        yield return new WaitForSeconds(.7f);
+        canHeavyAttack = false;
     }
 }
