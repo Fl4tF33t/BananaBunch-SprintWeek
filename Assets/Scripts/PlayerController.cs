@@ -19,13 +19,6 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
-    public float knockBackLength, knockBackForce;
-    private float knockBackCounter;
-
-    public float bounceForce;
-
-    public bool stopInput;
-
     private void Awake()
     {
         instance = this;
@@ -39,11 +32,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!stopInput)
-        {
-            if (knockBackCounter <= 0)
-            {
-
                 theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
@@ -79,37 +67,7 @@ public class PlayerController : MonoBehaviour
                 {
                     theSR.flipX = false;
                 }
-            }
-            else
-            {
-                knockBackCounter -= Time.deltaTime;
-                if (!theSR.flipX)
-                {
-                    theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
-                }
-                else
-                {
-                    theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
-                }
-            }
-
-        }
-
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
         anim.SetBool("isGrounded", isGrounded);
-    }
-
-    public void KnockBack()
-    {
-        knockBackCounter = knockBackLength;
-        theRB.velocity = new Vector2(0f, knockBackForce);
-
-        anim.SetTrigger("hurt");
-    }
-
-    public void Bounce()
-    {
-        theRB.velocity = new Vector2(theRB.velocity.x, bounceForce);
-        // AudioManager.instance.PlaySFX(10);
     }
 }
