@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 67eda3d9a1c063143b5fcc7eb5ea2928
+  - enabled: 1
+    path: Assets/2D Platformer Assets/Starter_Scene.unity
+    guid: 12eaea94eaebc5e459e49753ddfd1f78
   m_configObjects: {}
