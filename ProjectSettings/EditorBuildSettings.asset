@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2D Platformer Assets/Starter_Scene.unity
     guid: 12eaea94eaebc5e459e49753ddfd1f78
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 811720390b8db754abfd10f6b4fb529d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9ac0591522877de4aab134bfdc256173
   m_configObjects: {}
