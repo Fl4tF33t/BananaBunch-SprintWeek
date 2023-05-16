@@ -11,6 +11,11 @@ public class PlayerAttacks : MonoBehaviour
         public int damageAttack;
     }
 
+    public event EventHandler OnLightAttack;
+    public event EventHandler OnHeavyAttack;
+    public event EventHandler OnSpecialAttack;
+
+
     //AttackNumbers
     [SerializeField]
     int lightAttack = 5;
@@ -47,6 +52,7 @@ public class PlayerAttacks : MonoBehaviour
             {
                 damageAttack = lightAttack
             });
+            OnLightAttack?.Invoke(this, EventArgs.Empty);
         }
         if (Input.GetMouseButtonDown(1) && canAttack)
         {
@@ -55,6 +61,8 @@ public class PlayerAttacks : MonoBehaviour
             {
                 damageAttack = heavyAttack
             });
+            OnHeavyAttack?.Invoke(this, EventArgs.Empty);
+
         }
         if (Input.GetKeyDown(key) && canAttack)
         {
@@ -63,6 +71,8 @@ public class PlayerAttacks : MonoBehaviour
             {
                 damageAttack = specialAttack
             });
+            OnSpecialAttack?.Invoke(this, EventArgs.Empty);
+
         }
     }
 }
