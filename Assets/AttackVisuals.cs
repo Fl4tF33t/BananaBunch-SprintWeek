@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class AttackVisuals : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    PlayerAttacks playerAttacks;
+    Animator animator;
+    
+
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        playerAttacks.OnLightAttack += PlayerAttacks_OnLightAttack;
+        playerAttacks.OnHeavyAttack += PlayerAttacks_OnHeavyAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PlayerAttacks_OnHeavyAttack(object sender, System.EventArgs e)
     {
-        
+        animator.SetTrigger("isHeavyAttack");
+        Debug.Log("Animbegin");
+    }
+
+    private void PlayerAttacks_OnLightAttack(object sender, System.EventArgs e)
+    {
+        animator.SetTrigger("isLightAttack");
+        Debug.Log("Animbegin");
     }
 }
