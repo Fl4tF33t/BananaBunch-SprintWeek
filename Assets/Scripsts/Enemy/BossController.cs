@@ -36,6 +36,11 @@ public class BossController : MonoBehaviour
     [SerializeField]
     private Transform stage;
 
+    [SerializeField]
+    GameObject beeGameObjectPrefab;
+    [SerializeField]
+    Transform spawnLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +61,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement(pathIndex);
-        
+        Movement(pathIndex);   
     }
 
     private void Movement(int index)
@@ -114,11 +118,11 @@ public class BossController : MonoBehaviour
         isSmashing = false;
         isStaging = true;
         yield return new WaitForSeconds(5f);
+        Instantiate(beeGameObjectPrefab, spawnLocation.transform.position, Quaternion.identity);
         isStaging = false;
         pathIndex++;
         pathIndex %= pathCreator.Length;
         isMoving = true;
-
     }
 
     private IEnumerator AttackStart(float timeDelay)

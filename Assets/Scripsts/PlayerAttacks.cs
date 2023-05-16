@@ -36,6 +36,14 @@ public class PlayerAttacks : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canAttack = true;
+        if (canHeavyAttack)
+        {
+            Debug.Log("small attack");
+            OnAttack?.Invoke(this, new OnAttackEventArgs
+            {
+                damageAttack = specialAttack
+            });
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -46,6 +54,7 @@ public class PlayerAttacks : MonoBehaviour
     private void Update()
     {
         AttackControls();
+
         timeDelay -= Time.deltaTime;
     }
 
@@ -65,20 +74,14 @@ public class PlayerAttacks : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            OnHeavyAttack?.Invoke(this, EventArgs.Empty);
+            
             if (timeDelay < 0)
             {
+                OnHeavyAttack?.Invoke(this, EventArgs.Empty);
                 StartCoroutine(CanDoDamage());
-                if (canHeavyAttack)
-                {
-                    Debug.Log("heavy attack");
-                    OnAttack?.Invoke(this, new OnAttackEventArgs
-                    {
-                        damageAttack = heavyAttack
-                    });
-                }
+
             }
-            
+
         }
         if (Input.GetKeyDown(key))
         {
@@ -95,7 +98,7 @@ public class PlayerAttacks : MonoBehaviour
     }
     IEnumerator CanDoDamage()
     {
-        timeDelay = 1.5f;
+        timeDelay = 2.5f;
         yield return new WaitForSeconds(whenAttackDoesDamage);
         canHeavyAttack = true;
         yield return new WaitForSeconds(.7f);
