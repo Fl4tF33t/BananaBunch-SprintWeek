@@ -13,7 +13,9 @@ public class BossData : MonoBehaviour
     {
         public int health;
     }
-    public int health = 10;
+
+    [SerializeField]
+    private int health = 320;
 
     private void Start()
     {
