@@ -45,34 +45,41 @@ public class PlayerAttacks : MonoBehaviour
 
     private void AttackControls()
     {
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("small attack");
-            OnAttack?.Invoke(this, new OnAttackEventArgs
-            {
-                damageAttack = lightAttack
-            });
             OnLightAttack?.Invoke(this, EventArgs.Empty);
-        }
-        if (Input.GetMouseButtonDown(1) && canAttack)
-        {
-            Debug.Log("big attack");
-            OnAttack?.Invoke(this, new OnAttackEventArgs
+            if (canAttack)
             {
-                damageAttack = heavyAttack
-            });
+                Debug.Log("small attack");
+                OnAttack?.Invoke(this, new OnAttackEventArgs
+                {
+                    damageAttack = lightAttack
+                });
+            } 
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
             OnHeavyAttack?.Invoke(this, EventArgs.Empty);
-
-        }
-        if (Input.GetKeyDown(key) && canAttack)
-        {
-            Debug.Log("small attack");
-            OnAttack?.Invoke(this, new OnAttackEventArgs
+            if (canAttack)
             {
-                damageAttack = specialAttack
-            });
+                Debug.Log("heavy attack");
+                OnAttack?.Invoke(this, new OnAttackEventArgs
+                {
+                    damageAttack = heavyAttack
+                });
+            }
+        }
+        if (Input.GetKeyDown(key))
+        {
             OnSpecialAttack?.Invoke(this, EventArgs.Empty);
-
+            if (canAttack)
+            {
+                Debug.Log("small attack");
+                OnAttack?.Invoke(this, new OnAttackEventArgs
+                {
+                    damageAttack = specialAttack
+                });
+            }
         }
     }
 }
