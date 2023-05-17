@@ -18,6 +18,7 @@ public class BossHealthBarUI : MonoBehaviour
 
     private void BossData_OnHealthChange(object sender, BossData.OnHealthChangeEventArgs e)
     {
-        image.fillAmount = (float)e.health / 320 * 100;
+        Debug.Log("Health changed");
+        image.fillAmount = (float)e.health / 320;
     }
 }
