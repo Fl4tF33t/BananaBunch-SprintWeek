@@ -9,6 +9,11 @@ public class BossController : MonoBehaviour
     public event EventHandler OnSmashAttack;
     public PathCreator[] pathCreator;
 
+    //the bases that will be used to disappear
+    [SerializeField]
+    GameObject[] bases;
+    int baseIndex = 0;
+
     //Movement Variables
     [SerializeField]
     int pathIndex;
@@ -33,6 +38,9 @@ public class BossController : MonoBehaviour
     public bool isSmashing = false;
     public bool isStaging = false;
     bool doOnce = true;
+    bool doOnce1 = true;
+
+    public static bool isAttackable = true;
 
     //Stage areas
     [SerializeField]
@@ -56,6 +64,13 @@ public class BossController : MonoBehaviour
         if(e.health <= 240 && doOnce)
         {
             doOnce = false;
+            isAttackable = false;
+            SmashAttack(pathIndex);
+        }
+        if (e.health <= 140 && doOnce1)
+        {
+            doOnce1 = false;
+            isAttackable = false;
             SmashAttack(pathIndex);
         }
     }
@@ -120,12 +135,16 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         isSmashing = false;
         isStaging = true;
-        yield return new WaitForSeconds(5f);
+        isAttackable = true;
+        Destroy(bases[baseIndex].gameObject);
+        baseIndex++;
+        yield return new WaitForSeconds(2f);
         Instantiate(beeGameObjectPrefab, spawnLocation.transform.position, Quaternion.identity);
         isStaging = false;
         pathIndex++;
         pathIndex %= pathCreator.Length;
         isMoving = true;
+        
     }
 
     private IEnumerator AttackStart(float timeDelay)

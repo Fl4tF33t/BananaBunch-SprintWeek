@@ -1630,6 +1630,11 @@ MonoBehaviour:
   - {fileID: 185886087}
   - {fileID: 43719399}
   - {fileID: 600103254}
+  bases:
+  - {fileID: 618049000}
+  - {fileID: 408309408}
+  - {fileID: 2066503836}
+  - {fileID: 505556397}
   pathIndex: 0
   bossMovementSpeed: 2.25
   stingerAttackRate: 6
