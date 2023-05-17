@@ -117,55 +117,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TEST SHOULDER
+      name: Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 876
+        x: 161
+        y: 681
         width: 162
         height: 168
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8115327, y: 0.14618829}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf02764997e0c224da8e1aa4354d9341
-      internalID: -1162377409
+      spriteID: 4246ae28d0994654396ebfb3f9705b0c
+      internalID: -336688767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST THIGH
+      name: Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 283
-        y: 865
+        x: 409
+        y: 669
         width: 151
         height: 156
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48514563, y: 0.8810284}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d8cc2834bba823479aa49439908b80f
-      internalID: -478332732
+      spriteID: 96d3d20ab0e0dab4c90a96a09cd1eb53
+      internalID: 875035355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST HAT
+      name: Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 689
-        y: 681
+        x: 678
+        y: 0
         width: 577
-        height: 387
+        height: 703
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2295716e9a8c4e0449621f5efb23d25e
-      internalID: -1205723464
+      spriteID: dde6ae01db9d45940957478b7fb89b62
+      internalID: 295162787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST WEAPON
+      name: Sprite Sheet_3
       rect:
         serializedVersion: 2
         x: 1319
@@ -194,145 +194,103 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0887ee40adf3744b8ff112c795b3add
-      internalID: -1505684090
+      spriteID: 72145e3a392d58647808c6b3697fb86d
+      internalID: -2069119211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST ARM
+      name: Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 53
-        y: 711
+        x: 181
+        y: 518
         width: 99
         height: 142
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.522657, y: 0.84751266}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54b3156ee139a604f849b39cbf015265
-      internalID: 1540271639
+      spriteID: 8fa00d00c16be734f9b7a56c68a705d7
+      internalID: 1134013225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST SHIN
+      name: Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 282
-        y: 694
+        x: 410
+        y: 503
         width: 146
         height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5230452, y: 0.53323025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 523fec07721586c4bb5ca30fb0bf61c0
-      internalID: -1037048518
+      spriteID: 4be98928bf992734eac801c9f9a23a4c
+      internalID: -385227706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST DUDE
+      name: Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 722
-        y: 9
-        width: 500
-        height: 665
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28fb99b21ad22574b8bf15792a3c7386
-      internalID: 1628267206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEST HAND
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 498
+        x: 181
+        y: 305
         width: 99
         height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40937236, y: 0.8738392}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61cc8a1ba25b3f049b0a6110144f1f3a
-      internalID: 2122951608
+      spriteID: 1ba339b1e7a46e54cbd501efb3630b25
+      internalID: -340847900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEST FOOT
+      name: Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 268
-        y: 496
+        x: 394
+        y: 306
         width: 214
         height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42138913, y: 0.75753355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fba628d324e40f448c58865ac5f1787
-      internalID: 769095965
+      spriteID: 1ecb8edef4473454183046d1b36574ba
+      internalID: 1226367940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite Sheet (Test Head Removal)_9
+      name: Sprite Sheet (Test Head Removal)_0
       rect:
         serializedVersion: 2
-        x: 718
-        y: 404
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22542e2af6c092240a4a8abce12a1637
-      internalID: 493495971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEST BEARD
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 27
-        width: 343
+        x: 684
+        y: 676
+        width: 594
         height: 396
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -341,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b0a78c81e878446b037d22c6424d1f
-      internalID: -704557275
+      spriteID: 7bbb0fe19bc43a347bf1b3c0fdf35685
+      internalID: -1029627642
       vertices: []
       indices: 
       edges: []
@@ -358,17 +316,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite Sheet (Test Head Removal)_9: 493495971
-      TEST ARM: 1540271639
-      TEST BEARD: -704557275
-      TEST DUDE: 1628267206
-      TEST FOOT: 769095965
-      TEST HAND: 2122951608
-      TEST HAT: -1205723464
-      TEST SHIN: -1037048518
-      TEST SHOULDER: -1162377409
-      TEST THIGH: -478332732
-      TEST WEAPON: -1505684090
+      Sprite Sheet (Test Head Removal)_0: -1029627642
+      Sprite Sheet_0: -336688767
+      Sprite Sheet_1: 875035355
+      Sprite Sheet_2: 295162787
+      Sprite Sheet_3: -2069119211
+      Sprite Sheet_4: 1134013225
+      Sprite Sheet_5: -385227706
+      Sprite Sheet_6: -340847900
+      Sprite Sheet_7: 1226367940
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

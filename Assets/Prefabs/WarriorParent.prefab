@@ -380,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7809413933326496096}
   m_Layer: 0
-  m_Name: Arm Test
+  m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 7809413934234964118}
   - component: {fileID: 7809413934234964113}
   m_Layer: 0
-  m_Name: Test Dude
+  m_Name: Vartalo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,7 +902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7809413934399053269}
   m_Layer: 0
-  m_Name: TEST Warrior
+  m_Name: WarriorParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 7809413934689965013}
   - component: {fileID: 7809413934689964842}
   m_Layer: 0
-  m_Name: TEST Warrior
+  m_Name: WarriorModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 7809413934728474711}
   - component: {fileID: 7809413934728474710}
   m_Layer: 0
-  m_Name: Test Arm
+  m_Name: Olka1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
