@@ -60,6 +60,9 @@ TagManager:
   - name: Platform1
     uniqueID: 3433432661
     locked: 0
+  - name: Boss
+    uniqueID: 2133058043
+    locked: 0
   - name: Player
     uniqueID: 4246971539
     locked: 0
