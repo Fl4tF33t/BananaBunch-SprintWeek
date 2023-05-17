@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using System;
 
 public class BossController : MonoBehaviour
 {
+    public event EventHandler OnSmashAttack;
     public PathCreator[] pathCreator;
 
     //Movement Variables
@@ -92,7 +94,7 @@ public class BossController : MonoBehaviour
 
         //Finds all the players and a random location
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        int randomIndex = Random.Range(0, players.Length -1);
+        int randomIndex = UnityEngine.Random.Range(0, players.Length -1);
         Vector3 myPos = transform.position;
         Vector3 playerPos = players[randomIndex].transform.position;
         Vector3 direction = Vector3.Normalize(playerPos - myPos);
@@ -114,6 +116,7 @@ public class BossController : MonoBehaviour
 
     IEnumerator StartSmashAttack()
     {
+        OnSmashAttack?.Invoke(this, EventArgs.Empty);
         yield return new WaitForSeconds(2f);
         isSmashing = false;
         isStaging = true;

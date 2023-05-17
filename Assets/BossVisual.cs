@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BossVisual : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Animator animator;
+    [SerializeField]
+    BossController bossController;
+
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        bossController.OnSmashAttack += BossController_OnSmashAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void BossController_OnSmashAttack(object sender, System.EventArgs e)
     {
-        
+        animator.SetTrigger("isSmashing");
     }
 }
