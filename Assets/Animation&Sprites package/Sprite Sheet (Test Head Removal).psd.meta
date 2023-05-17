@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d627fb325f9a9a418314a8d63b479b7
+guid: 94643c820eec04143b16613f7b85014a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -150,8 +162,8 @@ TextureImporter:
       name: Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 673
-        y: 266
+        x: 678
+        y: 0
         width: 577
         height: 703
       alignment: 0
@@ -272,6 +284,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet (Test Head Removal)_0
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 676
+        width: 594
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbb0fe19bc43a347bf1b3c0fdf35685
+      internalID: -1029627642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -283,6 +316,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Sprite Sheet (Test Head Removal)_0: -1029627642
       Sprite Sheet_0: -336688767
       Sprite Sheet_1: 875035355
       Sprite Sheet_2: 295162787
