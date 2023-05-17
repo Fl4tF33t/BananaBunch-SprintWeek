@@ -87,6 +87,8 @@ public class BossController : MonoBehaviour
             isAttackable = false;
             SmashAttack(pathIndex);
         }
+
+        
     }
 
     // Update is called once per frame
