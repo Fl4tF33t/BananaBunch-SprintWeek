@@ -39,6 +39,8 @@ public class BossController : MonoBehaviour
     public bool isStaging = false;
     bool doOnce = true;
     bool doOnce1 = true;
+    bool doOnce2 = true;
+    bool doOnce3 = true;
 
     public static bool isAttackable = true;
 
@@ -67,9 +69,21 @@ public class BossController : MonoBehaviour
             isAttackable = false;
             SmashAttack(pathIndex);
         }
-        if (e.health <= 140 && doOnce1)
+        if (e.health <= 190 && doOnce1)
         {
             doOnce1 = false;
+            isAttackable = false;
+            SmashAttack(pathIndex);
+        }
+        if (e.health <= 140 && doOnce2)
+        {
+            doOnce2 = false;
+            isAttackable = false;
+            SmashAttack(pathIndex);
+        }
+        if (e.health <= 100 && doOnce3)
+        {
+            doOnce3 = false;
             isAttackable = false;
             SmashAttack(pathIndex);
         }
