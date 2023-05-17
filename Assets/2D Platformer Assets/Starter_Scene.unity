@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &313083940
 Transform:
   m_ObjectHideFlags: 0
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   - {fileID: 185886087}
   - {fileID: 43719399}
   - {fileID: 600103254}
-  pathIndex: 2
+  pathIndex: 0
   bossMovementSpeed: 2.25
   stingerAttackRate: 6
   stingerPrefab: {fileID: 4919861240577038087, guid: 7cce10e8c6a610b4c815c4d4eee72f5a, type: 3}
