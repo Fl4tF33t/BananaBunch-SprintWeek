@@ -36,7 +36,7 @@ public class PlayerAttacks : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canAttack = true;
-        if (canHeavyAttack)
+        if (canHeavyAttack && BossController.isAttackable)
         {
             Debug.Log("small attack");
             OnAttack?.Invoke(this, new OnAttackEventArgs
@@ -63,7 +63,7 @@ public class PlayerAttacks : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             OnLightAttack?.Invoke(this, EventArgs.Empty);
-            if (canAttack)
+            if (canAttack && BossController.isAttackable)
             {
                 OnAttack?.Invoke(this, new OnAttackEventArgs
                 {
@@ -85,7 +85,7 @@ public class PlayerAttacks : MonoBehaviour
         if (Input.GetKeyDown(key))
         {
             OnSpecialAttack?.Invoke(this, EventArgs.Empty);
-            if (canAttack)
+            if (canAttack && BossController.isAttackable)
             {
                 Debug.Log("small attack");
                 OnAttack?.Invoke(this, new OnAttackEventArgs

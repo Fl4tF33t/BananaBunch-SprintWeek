@@ -1630,6 +1630,11 @@ MonoBehaviour:
   - {fileID: 185886087}
   - {fileID: 43719399}
   - {fileID: 600103254}
+  bases:
+  - {fileID: 618049000}
+  - {fileID: 408309408}
+  - {fileID: 2066503836}
+  - {fileID: 505556397}
   pathIndex: 0
   bossMovementSpeed: 2.25
   stingerAttackRate: 6
@@ -2375,7 +2380,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783082953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
