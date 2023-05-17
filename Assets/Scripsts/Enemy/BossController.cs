@@ -93,7 +93,7 @@ public class BossController : MonoBehaviour
         StartCoroutine(AttackStart(2f));
 
         //Finds all the players and a random location
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("PlayerAttack");
         int randomIndex = UnityEngine.Random.Range(0, players.Length -1);
         Vector3 myPos = transform.position;
         Vector3 playerPos = players[randomIndex].transform.position;

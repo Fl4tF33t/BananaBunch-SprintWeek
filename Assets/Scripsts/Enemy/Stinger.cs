@@ -7,7 +7,7 @@ public class Stinger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerAttack"))
         {
             Debug.Log("HitPLayer");
             PlayerData playerData = other.GetComponent<PlayerData>();
