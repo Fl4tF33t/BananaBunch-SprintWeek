@@ -25,6 +25,5 @@ public class AttackVisuals : MonoBehaviour
     private void PlayerAttacks_OnLightAttack(object sender, System.EventArgs e)
     {
         animator.SetTrigger("isLightAttack");
-        Debug.Log("Animbegin");
     }
 }

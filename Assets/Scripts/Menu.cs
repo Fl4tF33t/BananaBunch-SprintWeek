@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public void PlayMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void PlayTutorial()
@@ -20,15 +24,20 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
+    public void PlayWinGame()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void PlayLoseGame()
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
     }
-
-    public void PlayAgain()
-    {
-        SceneManager.LoadScene(1);
-    }
-
 }
