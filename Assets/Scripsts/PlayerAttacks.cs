@@ -41,7 +41,7 @@ public class PlayerAttacks : MonoBehaviour
             Debug.Log("small attack");
             OnAttack?.Invoke(this, new OnAttackEventArgs
             {
-                damageAttack = specialAttack
+                damageAttack = heavyAttack
             });
         }
     }
