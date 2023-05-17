@@ -9,11 +9,6 @@ public class BossController : MonoBehaviour
     public event EventHandler OnSmashAttack;
     public PathCreator[] pathCreator;
 
-    //the bases that will be used to disappear
-    [SerializeField]
-    GameObject[] bases;
-    int baseIndex = 0;
-
     //Movement Variables
     [SerializeField]
     int pathIndex;
@@ -38,11 +33,6 @@ public class BossController : MonoBehaviour
     public bool isSmashing = false;
     public bool isStaging = false;
     bool doOnce = true;
-    bool doOnce1 = true;
-    bool doOnce2 = true;
-    bool doOnce3 = true;
-
-    public static bool isAttackable = true;
 
     //Stage areas
     [SerializeField]
@@ -66,29 +56,8 @@ public class BossController : MonoBehaviour
         if(e.health <= 240 && doOnce)
         {
             doOnce = false;
-            isAttackable = false;
             SmashAttack(pathIndex);
         }
-        if (e.health <= 190 && doOnce1)
-        {
-            doOnce1 = false;
-            isAttackable = false;
-            SmashAttack(pathIndex);
-        }
-        if (e.health <= 140 && doOnce2)
-        {
-            doOnce2 = false;
-            isAttackable = false;
-            SmashAttack(pathIndex);
-        }
-        if (e.health <= 100 && doOnce3)
-        {
-            doOnce3 = false;
-            isAttackable = false;
-            SmashAttack(pathIndex);
-        }
-
-        
     }
 
     // Update is called once per frame
@@ -151,16 +120,12 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         isSmashing = false;
         isStaging = true;
-        isAttackable = true;
-        Destroy(bases[baseIndex].gameObject);
-        baseIndex++;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         Instantiate(beeGameObjectPrefab, spawnLocation.transform.position, Quaternion.identity);
         isStaging = false;
         pathIndex++;
         pathIndex %= pathCreator.Length;
         isMoving = true;
-        
     }
 
     private IEnumerator AttackStart(float timeDelay)
