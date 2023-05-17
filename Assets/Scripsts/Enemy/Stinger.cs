@@ -9,7 +9,6 @@ public class Stinger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack"))
         {
-            Debug.Log("HitPLayer");
             PlayerData playerData = other.GetComponent<PlayerData>();
             playerData.HealthDamaged(15);
             Destroy(this.gameObject);

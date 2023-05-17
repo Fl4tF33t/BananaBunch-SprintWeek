@@ -65,7 +65,6 @@ public class PlayerAttacks : MonoBehaviour
             OnLightAttack?.Invoke(this, EventArgs.Empty);
             if (canAttack)
             {
-                Debug.Log("small attack");
                 OnAttack?.Invoke(this, new OnAttackEventArgs
                 {
                     damageAttack = lightAttack
